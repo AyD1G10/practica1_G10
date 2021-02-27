@@ -12,6 +12,9 @@ public class RegistroProducto {
 	@EJB
 	private RegistroProductoFacadeLocal registroProductoFacadeLocal;
 	
+	@EJB
+	private PagoFacade pagoFacade;
+	
 	@PostConstruct
 	public void init() {
 		
