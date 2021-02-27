@@ -39,9 +39,9 @@ public class PagoFacade extends AbstractFacade<Pago> implements PagoFacadeLocal{
 			+ " Total: " + (valor + iva).toString());
 		return iva;
 	}
-	public double restar_5porCiento(double num1, double num2) {
+	public double restar_5porCiento(double num1, double num2, double num3) {
 		double resultado =0;
-		resultado = num1 + num2;
+		resultado = num1 + num2 + num3;
 		resultado = resultado - (resultado * 0.05);
 		return resultado;
 	}
