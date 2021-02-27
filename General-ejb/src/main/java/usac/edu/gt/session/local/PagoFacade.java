@@ -27,4 +27,7 @@ public class PagoFacade extends AbstractFacade<Pago> implements PagoFacadeLocal{
 		return numReturn;
 	}
 	
+	public double CalcularIVA(double valor) {
+		return valor * 0.12;
+	}
 }
