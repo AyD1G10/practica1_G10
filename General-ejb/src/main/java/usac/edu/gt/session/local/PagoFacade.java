@@ -36,4 +36,9 @@ public class PagoFacade extends AbstractFacade<Pago> implements PagoFacadeLocal{
 		resultado = resultado - (resultado * 0.05);
 		return resultado;
 	}
+	
+	public void sumarTotalPago(double total,Pago pago) {
+		pago.total += total;
+	}
+	
 }
