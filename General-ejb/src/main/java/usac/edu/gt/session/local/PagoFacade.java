@@ -47,6 +47,8 @@ public class PagoFacade extends AbstractFacade<Pago> implements PagoFacadeLocal{
 	}
 	
 	public void sumarTotalPago(double total,Pago pago) {
+		DoLogger.log().info("Total: " + total.toString());
+		DoLogger.log().info("Total Pago: " + pago.total.toString());
 		pago.total += total;
 	}
 
