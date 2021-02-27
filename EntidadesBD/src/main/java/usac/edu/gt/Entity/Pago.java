@@ -7,6 +7,7 @@ public class Pago<T> {
 	private double total;
 	private int correlativo;
 	private List<T> listaProductos;
+	private String observaciones;
 	
 	public Pago(List<T> listaProductos,double total,int correlativo) {
 		this.listaProductos = listaProductos;
@@ -42,4 +43,12 @@ public class Pago<T> {
 		return "Categoria [correlativo="+correlativo+", total=" + total + ", listaProductos=" +listaProductos.toString()+"]"; 
 	}
 	
+	public String getObservaciones() {
+		return observaciones;
+	}
+
+	public void setObservaciones(String observaciones) {
+		this.observaciones = observaciones;
+	}
+
 }
