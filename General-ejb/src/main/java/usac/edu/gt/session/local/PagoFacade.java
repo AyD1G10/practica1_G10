@@ -33,7 +33,11 @@ public class PagoFacade extends AbstractFacade<Pago> implements PagoFacadeLocal{
 	}
 	
 	public double CalcularIVA(double valor) {
-		return valor * 0.12;
+		double iva = valor * 0.12;
+		DoLogger.log().info("Precio: " + valor.toString() 
+			+ " Iva: " + iva.toString() 
+			+ " Total: " + (valor + iva).toString());
+		return iva;
 	}
 	public double restar_5porCiento(double num1, double num2) {
 		double resultado =0;
