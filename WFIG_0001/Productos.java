@@ -10,6 +10,9 @@ public class Productos {
 	@EJB
 	private ProductoFacadeLocal productoFacadeLocal;
 	
+	@EJB
+	private PagoFacade pagoFacade;
+	
 	@PostConstruct
 	public void init() {
 		
