@@ -22,9 +22,14 @@ public class PagoFacade extends AbstractFacade<Pago> implements PagoFacadeLocal{
 	
 	@Override
 	public double pago1(double num1) {
-		double numReturn=num1+num1*0.1;
+		if(num1>0){
+			double numReturn=num1+num1*0.1;
+			return numReturn;
+			
+		}
 		
-		return numReturn;
+		
+		return num1;
 	}
 	
 	public double CalcularIVA(double valor) {
