@@ -22,4 +22,16 @@ public class OperacionesBasicas  {
 		
 		return num1 / num2;
 	}
+	
+	public int potencia(int base, int pot){
+
+        int result = 1;
+
+        while (pot != 0)
+        {
+            result *= base;
+            --pot;
+        }
+		return result;
+	}
 }
