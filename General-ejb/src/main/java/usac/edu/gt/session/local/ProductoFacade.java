@@ -28,4 +28,8 @@ public class ProductoFacade extends AbstractFacade<Producto> implements Producto
 	public edit(EntityManager entidad){
 		this.entidad = entidad;
 	}
+	
+	public remove(EntityManager entidad){
+		this.entidad = null;
+	}
 }
