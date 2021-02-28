@@ -8,7 +8,10 @@ public class PagoFacade extends AbstractFacade<Pago> implements PagoFacadeLocal{
 	
 	@Override
 	protected EntityManager getEntityManager() {
-		
+		UserTransaction userTransaction = ejbContext.getUserTransaction();
+		userTransaction.begin();
+		this.create(entidad);
+		userTransaction.commit();
 		return em;
 	}
 	
@@ -20,6 +23,10 @@ public class PagoFacade extends AbstractFacade<Pago> implements PagoFacadeLocal{
 		
 	}
 	
+	public create(EntityManager entidad){
+		this.entidad = entidad;
+	}
+
 	@Override
 	public double pago1(double num1) {
 		if(num1>0){
